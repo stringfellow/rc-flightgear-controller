@@ -24,19 +24,30 @@ It's actually pretty easy to get to the point where you know something is happen
 Configuring
 -----------
 
-You can see what the app thinks the Tx is reporting by going to Help > Joystick Configuration. You'll probably see lots of inversions and small decimals when the sticks are in resting position - that is the reason why your plane just went haywire.
+You can see what the app thinks the Tx is reporting by going to Help > Joystick Configuration.
+You'll probably see lots of inversions and small decimals when the sticks are in resting position -
+that is the reason why your plane just went haywire.
 
-I spent quite a bit of time making the file in this repo, but I have no idea if it will translate to other HK6S units, because the jitter may be entirely unique. But - give it a go and let me know. What you do is this:
+I spent quite a bit of time making the file in this repo, but I have no idea if it will translate
+to other HK6S units, because the jitter may be entirely unique.
+But - give it a go and let me know.
+
+What you do is this:
 
 * Take the `hk6s.xml` file and place it in FlightGear's Joysticks Dir, which on Mac OS X is:
   `/Applications/FlightGear.app/Contents/Resources/data/Input/Joysticks/Default`
 * Remove (or at least rename) the '`joystick.xml`' file (keep a backup!)
 * Re-launch the flight (you only need to start a new flight, not restart FlightGear)
-* That's it!
+* If it still goes crazy, look at the Joystick Configuration options under Help and set the offsets:
+  * If for example, the rudder says -0.15 then you would set the offset to 0.15
+  * If a control is flitting between two values, set it halfway, e.g. 0.135 for -0.13 and -0.14.
 
 Caveats
 -------
 
-I couldn't get the name to work - FlightGear looks up the name of the joystick and matches it to the `<name>` attribute in the XML. Mine was 'PPM\x1a\x1a\x1a\x1a\x1a\x1a\x1a\x1a\x1a\x1a\x1a' so in the XML there is a commented out name with that (with the XML entities for that control char), but FlightGear didn't like it so I had to set it to 'default' and remove the `joystick.xml` which contains the normal default.
+I couldn't get the name to work - FlightGear looks up the name of the joystick and matches it to the
+`<name>` attribute in the XML. Mine was 'PPM\x1a\x1a\x1a\x1a\x1a\x1a\x1a\x1a\x1a\x1a\x1a' so in the
+XML there is a commented out name with that (with the XML entities for that control char), but FlightGear
+didn't like it so I had to set it to 'default' and remove the `joystick.xml` which contains the normal default.
 
-I didn't sort the Rudder out yet, because I was testing with the "Moyes Dragonfly" model which doesn't seem to have a rudder...!
+This was configured using the 'Moyes Dragonfly' for the most part, and refined using the 'Piper J-3 Cub'.
