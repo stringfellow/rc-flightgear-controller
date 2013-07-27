@@ -3,6 +3,8 @@
 <!-- 
 ************************************************************************
 HK6S Can't get the name to work properly, so have to use it as 'default'
+
+Note - on the Tx controller, the Aileron and Throttle are both reversed!
 ************************************************************************
 -->
 
@@ -18,7 +20,7 @@ HK6S Can't get the name to work properly, so have to use it as 'default'
    <property>/controls/flight/aileron</property>
    <power type="double">1</power>
    <factor type="double">4.0</factor>
-   <offset type="double">0.24</offset>
+   <offset type="double">0.235</offset>
    <dead-band type="double">0.25</dead-band>
   </binding>
  </axis>
@@ -30,6 +32,7 @@ HK6S Can't get the name to work properly, so have to use it as 'default'
    <property>/controls/flight/elevator</property>
    <factor type="double">2.0</factor>
    <power type="double">1</power>
+   <offset type="double">0.135</offset>
   </binding>
  </axis>
 
@@ -40,7 +43,7 @@ HK6S Can't get the name to work properly, so have to use it as 'default'
    <property>/controls/engines/engine[0]/throttle</property>
    <factor type="double">2.5</factor>
    <power type="double">1</power>
-   <offset type="double">0.5</offset>
+   <offset type="double">0.55</offset>
   </binding>
  </axis>
 
@@ -49,7 +52,9 @@ HK6S Can't get the name to work properly, so have to use it as 'default'
   <binding>
    <command>property-scale</command>
    <property>/controls/flight/rudder</property>
-   <power type="double">2</power>
+   <power type="double">1</power>
+   <factor type="double">-2</factor>
+   <offset type="double">0.15</offset>
   </binding>
  </axis>
 
