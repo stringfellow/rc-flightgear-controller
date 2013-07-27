@@ -8,9 +8,9 @@ transmitter (TX) to talk to the flight simulator (FlightGear) in a usable way.
 You will need
 -------------
 
-* (HK-6DF-M2/16239 HobbyKing HK6S 2.4Ghz FHSS 6Ch Tx & Rx (Mode 2))[http://www.hobbyking.com/hobbyking/store/__16239__HobbyKing_HK6S_2_4Ghz_FHSS_6Ch_Tx_Rx_Mode_2_.html]
-* ("Buddy Box" - FMS Simulator USB Lire Cable Adapter For Esky JR Futaba)[http://www.ebay.co.uk/itm/New-FMS-Simulator-USB-Lire-Cable-Adapter-For-Esky-JR-Futaba-UK-/181169978712?ssPageName=ADME:L:OC:GB:3160]
-* (FlightGear.app)[http://www.flightgear.org/download/]
+* [HK-6DF-M2/16239 HobbyKing HK6S 2.4Ghz FHSS 6Ch Tx & Rx (Mode 2)](http://www.hobbyking.com/hobbyking/store/__16239__HobbyKing_HK6S_2_4Ghz_FHSS_6Ch_Tx_Rx_Mode_2_.html)
+* ["Buddy Box" - FMS Simulator USB Lire Cable Adapter For Esky JR Futaba](http://www.ebay.co.uk/itm/New-FMS-Simulator-USB-Lire-Cable-Adapter-For-Esky-JR-Futaba-UK-/181169978712?ssPageName=ADME:L:OC:GB:3160)
+* [FlightGear.app](http://www.flightgear.org/download/)
 * Some patience
 
 
