@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<!-- 
+************************************************************************
+HK6S Can't get the name to work properly, so have to use it as 'default'
+************************************************************************
+-->
+
+<PropertyList>
+  <!--
+  <name>PPM&#x1;&#x1;&#x1;&#x1;&#x1;&#x1;&#x1;&#x1;&#x1;&#x1;&#x1;</name>
+  -->
+  <name>default</name>
+ <axis n="0">
+  <desc>Aileron</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/flight/aileron</property>
+   <power type="double">1</power>
+   <factor type="double">4.0</factor>
+   <offset type="double">0.24</offset>
+   <dead-band type="double">0.25</dead-band>
+  </binding>
+ </axis>
+
+ <axis n="1">
+  <desc>Elevator</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/flight/elevator</property>
+   <factor type="double">2.0</factor>
+   <power type="double">1</power>
+  </binding>
+ </axis>
+
+ <axis n="2">
+  <desc>Throttle</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/engines/engine[0]/throttle</property>
+   <factor type="double">2.5</factor>
+   <power type="double">1</power>
+   <offset type="double">0.5</offset>
+  </binding>
+ </axis>
+
+ <axis n="4">
+  <desc>Rudder</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/flight/rudder</property>
+   <power type="double">2</power>
+  </binding>
+ </axis>
+
+ <button n="0">
+  <desc>Brakes</desc>
+  <binding>
+   <command>nasal</command>
+   <script>controls.applyBrakes(1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.applyBrakes(0)</script>
+   </binding>
+  </mod-up>
+ </button>
+
+ <button n="1">
+  <desc>Elevator trim up</desc>
+  <repeatable type="bool">true</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>controls.elevatorTrim(1)</script>
+  </binding>
+ </button>
+
+ <button n="2">
+  <desc>Elevator trim down</desc>
+  <repeatable type="bool">true</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>controls.elevatorTrim(-1)</script>
+  </binding>
+ </button>
+
+</PropertyList>
+
+<!-- end of joystick.xml -->
